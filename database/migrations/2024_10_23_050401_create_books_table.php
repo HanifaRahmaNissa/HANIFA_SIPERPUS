@@ -24,6 +24,8 @@ return new class extends Migration
 
             $table->foreign('bookshelf_id')->references('id')->on('bookshelfs')
                 ->onUpdate('cascade')->onDelete('cascade');
+                $table->foreign('book_id')->references('id')->on('books')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
     } //php artisan migrate:fresh
 
